@@ -10,6 +10,7 @@ applications:
         build:
           commands:
             - yarn nx build admin
+            - tree
       artifacts:
         files:
           - '**/*'
@@ -27,6 +28,7 @@ applications:
         build:
           commands:
             - yarn nx build user
+            - tree
       artifacts:
         files:
           - '**/*'
