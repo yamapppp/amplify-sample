@@ -10,11 +10,10 @@ applications:
         build:
           commands:
             - yarn nx build admin
-            - tree
       artifacts:
         files:
           - '**/*'
-        baseDirectory: dist/apps/admin/.next
+        baseDirectory: ../../dist/apps/admin/.next
       cache:
         paths:
           - node_modules/**/*
@@ -28,11 +27,10 @@ applications:
         build:
           commands:
             - yarn nx build user
-            - tree
       artifacts:
         files:
           - '**/*'
-        baseDirectory: dist/apps/user/.next
+        baseDirectory: ../../dist/apps/user/.next
       cache:
         paths:
           - node_modules/**/*
