@@ -26,11 +26,11 @@ applications:
             - yarn install
         build:
           commands:
-            - yarn nx build admin
+            - yarn nx build user
       artifacts:
         files:
           - '**/*'
-        baseDirectory: dist/apps/admin/.next
+        baseDirectory: dist/apps/user/.next
       cache:
         paths:
           - node_modules/**/*
