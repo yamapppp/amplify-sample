@@ -1,0 +1,36 @@
+version: 1
+applications:
+  - appRoot: apps/admin
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo '( ◠‿◠ )よう'
+            - yarn install
+        build:
+          commands:
+            - yarn nx build admin
+      artifacts:
+        files:
+          - '**/*'
+        baseDirectory: dist/apps/admin/.next
+      cache:
+        paths:
+          - node_modules/**/*
+  - appRoot: apps/user
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo '( ◠‿◠ )よう'
+            - yarn install
+        build:
+          commands:
+            - yarn nx build admin
+      artifacts:
+        files:
+          - '**/*'
+        baseDirectory: dist/apps/admin/.next
+      cache:
+        paths:
+          - node_modules/**/*
