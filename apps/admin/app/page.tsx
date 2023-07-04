@@ -1,16 +1,18 @@
-import styles from './page.module.css';
+'use client';
+
+import { getSession, signIn, signOut } from 'next-auth/react';
 
 export default async function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
+  const session = await getSession();
+  console.log(session?.user?.email);
   return (
-    <div className={styles.page}>
-      <div className="wrapper">
-        <div className="container">ADMIN PAGE</div>
-      </div>
+    <div>
+      <button suppressHydrationWarning onClick={() => signIn()}>
+        Sign in
+      </button>
+      <button suppressHydrationWarning onClick={() => signOut()}>
+        Sign out
+      </button>
     </div>
   );
 }

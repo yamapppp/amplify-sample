@@ -1,4 +1,4 @@
-import './global.css';
+import { NextAuthProvider } from './providers';
 
 export const metadata = {
   title: 'Welcome to admin',
@@ -11,8 +11,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ja">
+      <body>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   );
 }

@@ -38,7 +38,7 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "port": 4300,
+        "port": 3000,
         "buildTarget": "admin:build",
         "dev": true
       },
